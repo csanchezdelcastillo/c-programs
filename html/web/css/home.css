@@ -29,7 +29,7 @@ ul#menu a{
 }
 
 ul#menu a:hover {
-    background-image: url('../images/fondo_boton.png');
+background-image: url('../images/fondo_boton.png');
 }
 #claim {
     background-image: url('../images/claim.png');
@@ -48,4 +48,19 @@ float:left;
 color:white;
       font-size:20pt;
       font-family:arial;
+ 	 
+}
+.Advantage{
+background-color: #EDEDED;
+font-size: 10pt;
+font-family: arial;
+width: 300px;
+display:inline-block;
+float: left;
+padding: 2ex 1ex 1ex 1ex;
+border: 0px;
+}
+.save{
+float: left;
+margin-right: 5px;
 }
