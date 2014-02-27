@@ -34,12 +34,17 @@ background-image: url('../images/fondo_boton.png');
 #claim {
     background-image: url('../images/claim.png');
 height: 336px;
+position: relative;
 }
 
 #showfront {
 float:right;
-    margin-top:80px;
+    margin-top:40px;
     margin-right:50px;
+position: absolute;
+	  z-index: 2;
+right: 0px;
+
 }
 #claim span {
     margin-top:70px;
@@ -68,9 +73,25 @@ margin-right: 5px;
 #button {
    margin-top: 30px;
    margin-left:40px;
-   color: red;
-   border:0px;
 }
-.button span {
+.texto {
 	position: relative;
+color: red;
+font-weight: bold;
+font-size: 13pt;
+border: 0px;
+ top: -43px;
+left: 70px;
+}
+.Presentation {
+    font-size: 10pt;
+font-family: arial;
+width: 300px;
+display:inline-block;
+float: left;
+padding: 2ex 1ex 1ex 1ex;
+border: 0px;
+}
+.who{
+float: left;
 }
