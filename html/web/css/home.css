@@ -1,5 +1,5 @@
 div{
-    border: 0px solid black;
+border: 0px solid black;
 }
 
 #page{
@@ -57,24 +57,29 @@ right: 0px;
 float:left;
 color:white;
       font-size:20pt;
-      font-family:arial;
- 	 
+font-family:arial;
+ 
 }
 .Advantage{
 background-color: #EDEDED;
 font-size: 10pt;
 font-family: arial;
-width: 300px;
 display:inline-block;
+width: 300px;
 padding: 2ex 1ex 1ex 1ex;
 border: 0px;
+}
+.text{
+position: relative;
+left:90px;
+top:-50px;
 }
 #button {
    margin-top: 200px;
    margin-left:-350px;
   
 }
-.texto {
+.Texto {
 	position: relative;
 color: red;
 font-weight: bold;
@@ -89,10 +94,24 @@ font-family: arial;
 width: 300px;
 display:inline-block;
 float: left;
-padding: 2ex 1ex 1ex 1ex;
+padding: 5ex 1ex 1ex 1ex;
 border: 0px;
 }
-.read {
+
+.Read {
     float: left;
     margin-top:30px;
+   height:40px; 
+}
+
+.Aside {
+background-color: #EDEDED;
+width:300px;
+float: left;
+display:inline-block;
+font-size: 10pt;
+font-family: arial;
+padding: 5ex 1ex 2ex 5ex;
+
+
 }
