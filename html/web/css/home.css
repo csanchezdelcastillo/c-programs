@@ -75,8 +75,8 @@ display:inline-block;
 }
 .Text{
 position: relative;
-left:90px;
-top:-40px;
+left:100px;
+top:-50px;
 }
 #button {
    margin-top: 200px;
@@ -101,6 +101,10 @@ float: left;
 padding: 5ex 1ex 1ex 1ex;
 border: 0px;
 }
+#presentation ul{
+    list-style:none;
+	color: blue;
+}
 
 .Read {
     float: left;
@@ -115,11 +119,16 @@ width: 284px;
 height:200px;
 font-size: 9pt;
 font-family: arial;
-padding: 5ex 1ex 2ex 5ex;
+padding: 5ex 1ex 6ex 5ex;
 border:0px;
-
 }
 #aside {
 display:inline-block;
 
+}
+#aside ul{
+    list-style:none
+}
+.Color{
+color: blue;
 }
