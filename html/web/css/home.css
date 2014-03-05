@@ -15,8 +15,8 @@ margin: 0 auto 0 auto;
 
 ul#menu {
    text-align: right;
-  list-style-type: none;
-  text-transform: uppercase;
+   list-style-type: none;
+   text-transform: uppercase;
 }
 
 ul#menu li {
@@ -57,16 +57,16 @@ right: 0px;
 float:left;
 color:white;
       font-size:20pt;
-font-family:arial;
+      font-family:arial;
  
 }
 .Advantage{
 background-color: #EDEDED;
 float:left;
-font-size: 9pt;
-font-family: arial;
-width: 309px;
-height: 100px;
+  font-size: 9pt;
+  font-family: arial;
+   width: 309px;
+   height: 100px;
 padding: 5ex 1ex 1ex 1ex;
 border: 0px;
 }
@@ -75,8 +75,8 @@ display:inline-block;
 }
 .Text{
 position: relative;
-left:100px;
-top:-50px;
+ left:100px;
+ top:-50px;
 }
 #button {
    margin-top: 200px;
@@ -86,15 +86,15 @@ top:-50px;
 .Texto {
 	position: relative;
 color: red;
-font-weight: bold;
-font-size: 12pt;
+ font-weight: bold;
+ font-size: 12pt;
 border: 0px;
 top: -43px;
 left: 75px;
 }
 .Presentation {
     font-size: 10pt;
-font-family: arial;
+    font-family: arial;
 width: 300px;
 display:inline-block;
 float: left;
@@ -115,10 +115,10 @@ border: 0px;
 .Aside {
 background-color: #EDEDED;
 float: left;
-width: 284px;
-height:200px;
-font-size: 9pt;
-font-family: arial;
+  width: 284px;
+  height:200px;
+   font-size: 9pt;
+   font-family: arial;
 padding: 5ex 1ex 6ex 5ex;
 border:0px;
 }
