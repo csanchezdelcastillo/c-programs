@@ -1,0 +1,118 @@
+div{
+border: 0px solid black;
+}
+
+#page{
+width: 963px;
+margin: 0 auto 0 auto;
+}
+
+#logo {
+   float: left;
+   width: 220px;
+   height: 30px;
+}
+
+ul#menu {
+   text-align: right;
+   list-style-type: none;
+   text-transform: uppercase;
+}
+
+ul#menu li {
+   display: inline;
+   margin: 0 1ex 0 1ex;
+}
+
+ul#menu a{
+   color: #AAA;
+   text-decoration: none;
+   padding: 0.3ex 1ex 0.3ex 1ex;
+}
+
+ul#menu a:hover {
+background-image: url('../images/fondo_boton.png');
+}
+#claim {
+    background-image: url('../images/header.png');
+height: 90px;
+}
+#claim span {
+    margin-top:35px;
+    margin-right:50px;
+float:right;
+color:white;
+      font-size:18pt;
+      font-family:arial; 
+}
+#texto2 span {
+    margin-top: 30px;
+    margin-left:40px;
+float:left;
+color:white;
+      font-size:18pt;
+      font-family:arial;
+      font-weight:bold;
+}
+#name {
+    margin-top:50px;
+    margin-left:20px;
+float:left;
+font-family:arial;
+}
+#email {
+    margin-top:150px;
+    margin-left:20px;
+   position:absolute;
+float:left;
+font-family:arial;
+}
+#subject {
+    margin-top:250px;
+margin-left:20px;
+position:absolute;
+float:left;
+font-family:arial;
+}
+#coments {
+    margin-top:350;
+    margin-left:0px;
+position:absolute;
+float:left;
+}
+#submit {
+margin-top:500px;
+margin-left:20px;
+position:absolute; 
+float:left;
+}
+#sidebar {
+float:right;
+      z-index:2;
+     position:absolute;
+	      margin-left:704px;
+}
+.Aside {
+background-color: #EDEDED;
+float:left;
+  width: 284px;
+  height:200px;
+   font-size: 9pt;
+   font-family: arial;
+padding: 5ex 1ex 6ex 5ex;
+border:0px;
+       margin-top:453px;
+}
+#aside {
+display:inline-block;
+
+}
+
+}
+#aside ul{
+    list-style:none
+}
+.Color{
+color: blue;
+}
+

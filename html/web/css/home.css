@@ -40,10 +40,10 @@ height: 336px;
 
 #showfront {
 float:right;
-    margin-top:77px;
+    margin-top:36px;
     margin-right: 15px;
     width: 400px;
-    height: 280px;
+    height: 270px;
 	    z-index: 2;
 position: relative;
 }
@@ -97,7 +97,7 @@ left: 75px;
 width: 300px;
 display:inline-block;
 float: left;
-padding: 5ex 1ex 1ex 1ex;
+padding: 1ex 1ex 1ex 1ex;
 border: 0px;
 }
 #presentation ul{
@@ -131,3 +131,4 @@ display:inline-block;
 .Color{
 color: blue;
 }
+
