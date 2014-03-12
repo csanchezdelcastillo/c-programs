@@ -32,6 +32,7 @@ ul#menu a{
 
 ul#menu a:hover {
 background-image: url('../images/fondo_boton.png');
+border-radius: 5px;
 }
 #claim {
     background-image: url('../images/header.png');
@@ -55,27 +56,27 @@ color:white;
       font-weight:bold;
 }
 #name {
-    margin-top:50px;
+    margin-top:30px;
     margin-left:20px;
 float:left;
 font-family:arial;
 }
 #email {
-    margin-top:150px;
+    margin-top:130px;
     margin-left:20px;
    position:absolute;
 float:left;
 font-family:arial;
 }
 #subject {
-    margin-top:250px;
+    margin-top:230px;
 margin-left:20px;
 position:absolute;
 float:left;
 font-family:arial;
 }
 #coments {
-    margin-top:350;
+    margin-top:330;
     margin-left:0px;
 position:absolute;
 float:left;
@@ -87,10 +88,8 @@ position:absolute;
 float:left;
 }
 #sidebar {
-float:right;
-      z-index:2;
-     position:absolute;
-	      margin-left:704px;
+float:right; 	
+ background-image:url('../images/sidebar.png')
 }
 .Aside {
 background-color: #EDEDED;
@@ -101,7 +100,7 @@ float:left;
    font-family: arial;
 padding: 5ex 1ex 6ex 5ex;
 border:0px;
-       margin-top:453px;
+       margin-top:470px;
 }
 #aside {
 display:inline-block;
