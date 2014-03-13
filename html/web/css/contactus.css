@@ -89,7 +89,13 @@ float:left;
 }
 #sidebar {
 float:right; 	
- background-image:url('../images/sidebar.png')
+
+}
+#sidebar span {
+position:absolute;
+    font-family:arial;
+    margin-top:43px;
+    margin-left:-245px;
 }
 .Aside {
 background-color: #EDEDED;
@@ -100,14 +106,13 @@ float:left;
    font-family: arial;
 padding: 5ex 1ex 6ex 5ex;
 border:0px;
-       margin-top:470px;
+       
 }
 #aside {
 display:inline-block;
 
 }
 
-}
 #aside ul{
     list-style:none
 }
