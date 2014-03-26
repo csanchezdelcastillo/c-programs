@@ -12,18 +12,18 @@ int main(){
     const char *sentence = "The world is vampire.";
 
     const char *beginning = sentence;
-          
+
 
     const char *end = sentence;
-
+    //for(;*end !='\0';end++) //
     while(*end != '\0')
-	
-    *end++;
+
+	*end++;
 
     while(end != beginning){
 
 	*end--;
-    printf( "%c\n\t", *end);
+	printf( "%c\n\t", *end);
     }
     printf("\n");
     return EXIT_SUCCESS;
