@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ncurses.h>
+#include<stdio_ext.h>
+#include<time.h>
 
 void loop (char c [3][3]);
 
@@ -10,23 +12,28 @@ void tablero (char c [3][3]);
 
 void intro_yo (char c [3][3]);
 
+void no_inteligencia (char c [3][3]);
+
 int main(int argc, char *argv[]){
 
     char c [3][3]; //** declaro una matriz de tipo caracter de 3x3**//
     //**
     loop (c);  //**llama a las funciones y refresca la pantalla **//
-
+    system ("pause");
+    return 0;
 }
 
 
-void loop (char c [3][3]){
+void loop (char c[3][3]){
     intro_num (c);
     tablero (c);
     intro_yo (c);
     tablero (c);
+    no_inteligencia (c);
+    tablero(c);
 }
 
-void intro_num (char c [3][3]){   //** FUNCION PARA DARLE VALORES A LA MATRIZ//RELLENAR **//
+void intro_num (char c[3][3]){   //** FUNCION PARA DARLE VALORES A LA MATRIZ//RELLENAR **//
 
 
     char aux; //** variable de tipo caracter **//
@@ -37,7 +44,7 @@ void intro_num (char c [3][3]){   //** FUNCION PARA DARLE VALORES A LA MATRIZ//R
 
 	for(int b = 0; b<3; b++){
 
-	    c [a][b] = aux++; //** de tal forma que si c de [0][0] = a 1 y queremos que amuente en 1 .
+	    c[a][b] = aux++; //** de tal forma que si c de [0][0] = a 1 y queremos que amuente en 1 .
 	}
     }
 }
@@ -51,9 +58,9 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
     do{
 	do{
 	    printf(" Introduce tu casilla:\n ");
-	    __fpurge();
-	    scanf("%c",&d);
-	}while (aux<1 || aux>9)
+	    __fpurge(stdin);
+	    scanf("%c",&aux);
+	}while (aux < '1' || aux > '9');
 	switch (aux) {
 	    case '1' : {
 			   a = 0;
@@ -131,8 +138,27 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 		       break;
 	}
     }while (d == 1);
-    c [a][b] = 'x';
+    c[a][b] = 'x';
 }
+
+
+void no_intelegencia (char c[3][3]){
+    int a,
+        b,
+	d;	
+    srand(time(NULL));
+	do{
+	    a= rand() % 3;
+	    b= rand() % 3;
+	    d= 0;
+	    if(c[a][b] == 'x' || c[a][b] == 'o'){
+		d= 1;
+	    }
+	}while(d==1);
+
+c[a][b] = 'o';
+}
+
 
 
 
@@ -140,11 +166,11 @@ void tablero (char c[3][3]){ //** Pintar tablero**//
     for(int a=0;a<3;a++){
 	for(int b=0;b<3;b++)
 	    if(b<2)
-		printf(" %c | ",c [a][b]);
+		printf(" %c | ",c[a][b]);
 	    else
-		printf(" %c ",c [a][b]);
+		printf(" %c ",c[a][b]);
 	if(a<2)
-	    printf("\n.............\n");      
+	    printf("\n............\n");      
     }
     printf("\n\n");
 }
