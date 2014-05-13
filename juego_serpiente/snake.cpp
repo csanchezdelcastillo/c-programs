@@ -82,7 +82,7 @@ void muestra(Serpiente *serpiente){
     pintar_fruta();
     attron(COLOR_PAIR(1));
     for (int i=0; i<serpiente->longitud; i++)
-	mvprintw( serpiente->anillo[i].y, serpiente->anillo[i].x, "*");
+	mvprintw( serpiente->anillo[i].y, serpiente->anillo[i].x, "@");
     attroff(COLOR_PAIR(1));
     refresh();
 }
@@ -103,9 +103,11 @@ int main(int argc, char *argv[]){
     serpiente.longitud = L0;
     struct TCoordenada movimiento = {0, -1};
     int user_input,
-	color;
-    init_pair(1,COLOR_RED,COLOR_BLACK);
-    color = 1 ;
+	color=0;
+    initscr(); 
+    start_color();
+    init_pair(1,COLOR_GREEN,COLOR_BLACK);
+   
     
     srand(time(NULL));
 
@@ -116,6 +118,7 @@ int main(int argc, char *argv[]){
     keypad(stdscr, TRUE); // Vale para leer las flechas
     noecho(); // Para que no se vea el caracter pulsado.
     curs_set(0); // No se ve el cursor.
+    color = 1;
     while((user_input = getch()) != ESC){
 
 	switch(tolower(user_input)){
