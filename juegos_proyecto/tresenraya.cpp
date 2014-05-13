@@ -57,7 +57,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
     char aux;
     do{
 	do{
-	    printf(" Introduce tu casilla:\n ");
+	    printf(" Introduce tu casilla:\t ");
 	    __fpurge(stdin);
 	    scanf("%c",&aux);
 	}while (aux < '1' || aux > '9');
@@ -142,7 +142,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 }
 
 
-void no_intelegencia (char c[3][3]){
+void no_inteligencia (char c[3][3]){
     int a,
         b,
 	d;	
@@ -170,7 +170,7 @@ void tablero (char c[3][3]){ //** Pintar tablero**//
 	    else
 		printf(" %c ",c[a][b]);
 	if(a<2)
-	    printf("\n............\n");      
+	    printf("\n.............\n");      
     }
     printf("\n\n");
 }
