@@ -76,4 +76,41 @@ if(alumno.posibilidades)-------> esto dara hola!
     
     true 
 
+    -----------------------------------------------
+    -----------------------------------------------
 
+    var summary = {}
+
+    function report() {
+	val real_letters = 0
+	    for(var i=0;i<text.length;i++){
+		var letter = text[i]
+		    letter = letter.toLowerCase()
+
+		    if( /[a-z]/i.test(letter) ){  //**lee en el conjunto que va de la "a" a la "z"
+			real_letters++
+			    if(!summary[letter])
+				summary[letter]=0
+				    summary[letter]++
+		    }
+	    }
+	for (var i in summary)
+	    summary[i]=Math.roun(10000 * summary[i]/real_letters)/100
+		document.getElementById("es").innerHTML = summary.toSource()
+    }
+
+
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+Expresiones regulares - son patrones para buscar en el texto.
+
+-+-+-+-+-+-+-+-+-
+RUBULAR ->A RUBY REGULAR EXPRESION EDITOR.
+
+
+\b[^i]+\b        ---> que no me lea las palabras que tienen i . de tal manera que busco el comienzo de la palabra luego una cadena de caracters q contenga la y y busco el final de la palabra.
+-+-+-+-+-+-+-+-+-
