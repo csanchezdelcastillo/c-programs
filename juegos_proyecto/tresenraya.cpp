@@ -25,12 +25,17 @@ int main(int argc, char *argv[]){
 
 
 void loop (char c[3][3]){
-    intro_num (c);
-    tablero (c);
-    intro_yo (c);
-    tablero (c);
-    no_inteligencia (c);
-    tablero(c);
+int i;
+
+i = 0;
+   
+ intro_num (c);
+ tablero (c);
+   
+
+do{
+}while(i <= 9);
+ 
 }
 
 void intro_num (char c[3][3]){   //** FUNCION PARA DARLE VALORES A LA MATRIZ//RELLENAR **//
@@ -65,80 +70,80 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 	    case '1' : {
 			   a = 0;
 			   b = 0;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 
 	    case '2' : {
 			   a = 0;
 			   b = 1;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 
 	    case '3' : {
 			   a = 0;
 			   b = 2;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	    case '4' : {
 			   a = 1;
 			   b = 0;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	    case '5' : {
 			   a = 1;
 			   b = 1;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	    case '6' : {
 			   a = 1;
 			   b = 2;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	    case '7' : {
 			   a = 2;
 			   b = 0;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	    case '8' : {
 			   a = 2;
 			   b = 1;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	    case '9' : {
 			   a = 2;
 			   b = 2;
-			   if (c[a][b] == 'x' || c[a][b] == 'o')
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
 			       d = 1;
-			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+			   printf(" ESA CASILLA ESTA OCUPADA \n ");
 		       }
 		       break;
 	}
     }while (d == 1);
-    c[a][b] = 'x';
+    c[a][b] ='X';
 }
 
 
@@ -151,12 +156,12 @@ void no_inteligencia (char c[3][3]){
 	    a= rand() % 3;
 	    b= rand() % 3;
 	    d= 0;
-	    if(c[a][b] == 'x' || c[a][b] == 'o'){
+	    if(c[a][b] == 'X' || c[a][b] == 'O'){
 		d= 1;
 	    }
 	}while(d==1);
 
-c[a][b] = 'o';
+c[a][b] = 'O';
 }
 
 
