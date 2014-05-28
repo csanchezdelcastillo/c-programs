@@ -4,7 +4,7 @@
 #include<stdio_ext.h>
 #include<time.h>
 #include<unistd.h>
-#define CLEAR "clear"
+
 void loop (char c [3][3]);
 
 void intro_num (char c [3][3]);
@@ -214,7 +214,7 @@ void tablero (char c[3][3]){ //** Pintar tablero**//
 
 int ganador (char c[3][3]){	//**funcion que comprueba si hemos ganado**//
 
-	if(c[0][0] == 'X' || c[0][0] == 'X'){
+	if(c[0][0] == 'X' || c[0][0] == 'O'){
 		if(c[0][0] == c[0][1] && c[0][0] == c[0][2]){
 			if(c[0][0] == 'X')
 				return 0; //** he ganado! **//
