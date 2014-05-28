@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
 	char c [3][3]; //** declaro una matriz de tipo caracter de 3x3**//
 	//**
 	loop (c);  //**llama a las funciones y refresca la pantalla **//
-	system ("pause");
+	fgetc(stdin);
 	return 0;
 }
 
@@ -41,7 +41,7 @@ void loop (char c[3][3]){   //** Turnos **//
 
 		tablero (c);
 
-		if(contador % 2 == 0){       //** si i resto 2 ("JUGADORES") es igual a 0 entonces -> vamos nosotros("intro_yo")**//
+		if(contador % 2 == 0){       //** si 'contador' resto 2 ("JUGADORES") es igual a 0 entonces -> vamos nosotros("intro_yo")**//
 
 			intro_yo (c);
 		}
