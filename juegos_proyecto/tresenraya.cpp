@@ -4,7 +4,7 @@
 #include<stdio_ext.h>
 #include<time.h>
 #include<unistd.h>
-
+#define CLEAR "clear"
 void loop (char c [3][3]);
 
 void intro_num (char c [3][3]);
@@ -37,9 +37,10 @@ void loop (char c[3][3]){   //** Turnos **//
 
 
 	do{
-		system("clear");//** borra todo lo que haya en pantalla**//
-
+		//** borra todo lo que haya en pantalla**//
+		system("clear");
 		tablero (c);
+		printf("\n");
 
 		if(contador % 2 == 0){       //** si 'contador' resto 2 ("JUGADORES") es igual a 0 entonces -> vamos nosotros("intro_yo")**//
 
@@ -52,18 +53,18 @@ void loop (char c[3][3]){   //** Turnos **//
 		contador++;
 	}while(contador <= 9 && comprobador == 2);
 
+	
 	system("clear");
-
 	tablero (c);
 
 	if ( comprobador == 0){
 		printf("\t Enhorabuena has ganado !\n");
 	}
 	else if( comprobador == 1){
-		printf("\t Has perdido :(\n");
+		printf("\t Has perdido :(\n\n");
 	}
 	else{
-		printf("\t Has empatado :/ \n");
+		printf("\t Has empatado :/ \n\n");
 	}
 
 
@@ -103,7 +104,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 0;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 
@@ -112,7 +113,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 1;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 
@@ -121,7 +122,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 2;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 			case '4' : {
@@ -129,7 +130,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 0;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 			case '5' : {
@@ -137,7 +138,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 1;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 			case '6' : {
@@ -145,7 +146,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 2;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 			case '7' : {
@@ -161,7 +162,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 1;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 			case '9' : {
@@ -169,7 +170,7 @@ void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una f
 					   b = 2;
 					   if (c[a][b] == 'X' || c[a][b] == 'O')
 						   d = 1;
-					   printf(" ESA CASILLA ESTA OCUPADA \n ");
+					   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
 				   }
 				   break;
 		}
