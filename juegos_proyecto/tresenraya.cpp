@@ -203,11 +203,11 @@ void tablero (char c[3][3]){ //** Pintar tablero**//
 	for(int a=0;a<3;a++){
 		for(int b=0;b<3;b++)
 			if(b<2)
-				printf(" %c | ",c[a][b]);
+				printf("\t| %c | ",c[a][b]);
 			else
-				printf(" %c ",c[a][b]);
+				printf("\t| %c | ",c[a][b]);
 		if(a<2)
-			printf("\n.............\n");      
+			printf("\n\t--------------------\n");      
 	}
 	printf("\n\n");
 }
