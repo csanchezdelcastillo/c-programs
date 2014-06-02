@@ -234,7 +234,10 @@ int ganador (char c[3][3]){	//**funcion que comprueba si hemos ganado**//
 		else{
 			return 1; //** he perdido :( **//	
 
-		}
+		} //* if (c[0][0] == 'X' && c[0][1] == 'X' && c[0][2] == 'X' || c[0][0]) == 'X' && c[1][0] == 'X' && c[2][0] == 'X'|| c[1][1] == 'X' && c[1][1] == 'X' && c[1][1] == 'X'){ 
+		//*	return 0;
+		//*    } y con la y pon return 1.
+
 
 	}
 	if(c[1][1] == 'X' || c[1][1] == 'O'){
