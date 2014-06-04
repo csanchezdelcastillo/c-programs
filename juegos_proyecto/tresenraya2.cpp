@@ -1,152 +1,263 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<ncurses.h>
+#include<stdio_ext.h>
+#include<time.h>
+#include<unistd.h>
 
-int main (){
-	int jugador=1,
-	    error,
-	    empate=0,
-	    ganar=0;
-	char c1='1',
-	     c2='2',
-	     c3='3',
-	     c4='4',
-	     c5='5',
-	     c6='6',
-	     c7='7',
-             c8='8',
-	     c9='9',
-	     tiro,
-	     marca,
-             respuesta='y';
+void loop (char c [3][3]);
 
-	do{
+void intro_num (char c [3][3]);
 
-		error=1;
+void tablero (char c [3][3]);
 
-		system("cls");
+void intro_yo (char c [3][3]);
 
-		printf("JUEGO DE LAS TRES EN RAYA\n");
-		printf("\n %c | %c | %c\n",c1,c2,c3);
-		printf("---+---+---\n");
-		printf("\n %c | %c | %c\n",c4,c5,c6);
-		printf("---+---+---\n");
-		printf("\n %c | %c | %c\n\n",c7,c8,c9);
+void no_inteligencia (char c [3][3]);
 
-		if(jugador==1){
-			marca='X';
-		}
+int ganador (char c [3][3]);
 
-		else{
-			marca='O';
-		}
-		printf("TURNO DEL JUGADOR %d.",jugador);
-		printf("\nINDICA LA POSICIÓN DONDE COLOCAS LA FICHA: ");
+int main(int argc, char *argv[]){
 
-		fflush(stdin);
+    char c [3][3]; //** declaro una matriz de tipo caracter de 3x3**//
+    //**
+    loop (c);  //**llama a las funciones y refresca la pantalla **//
+    fgetc(stdin);
+    return 0;
+}
 
-		scanf("%c",&tiro);
 
-		if (tiro=='1' && c1=='1') {c1=marca;}
-		else if (tiro=='2' && c2=='2') {c2=marca;}
-		else if (tiro=='3' && c3=='3') {c3=marca;}
-		else if (tiro=='4' && c4=='4') {c4=marca;}
-		else if (tiro=='5' && c5=='5') {c5=marca;}
-		else if (tiro=='6' && c6=='6') {c6=marca;}
-		else if (tiro=='7' && c7=='7') {c7=marca;}
-		else if (tiro=='8' && c8=='8') {c8=marca;}
-		else if (tiro=='9' && c9=='9') {c9=marca;}
-		else {printf("ERROR! MOVIMIENTO NO VÁLIDO\n"); error=2;}
+void loop (char c[3][3]){   //** Turnos **//
+    int contador,
+	comprobador;
+    contador = 0;
+    bool acabado = false;
+while(!acabado){
 
-		if(c1=='X'||c1=='O'){
+    intro_num (c);
 
-			if(c2==c1&&c3==c1){
-				ganar=1;
-			}
 
-			if(c4==c1&&c7==c1){
-				ganar=1;
-			}
-		}
+    do{
+	//** borra todo lo que haya en pantalla**//
+	system("clear");
+	tablero (c);
 
-		if(c5=='X'||c5=='O'){
-			if (c1 == c5 && c9 == c5)
-			{ganar=1;}
-			if (c2 == c5 && c8 == c5)
-			{ganar=1;}
-			if (c4 == c5 && c6 == c5)
-			{ganar=1;}
-			if (c3 == c5 && c7 == c5)
-			{ganar=1;}
-		}
+      
+	if(contador % 2 == 0){       //** si 'contador' resto 2 ("JUGADORES") es igual a 0 entonces -> vamos nosotros("intro_yo")**//
 
-		if(c9=='X'||c9=='O'){
-			if (c6 == c9 && c3 == c9)
-			{ganar=1;}
-			if (c7 == c9 && c8 == c9)
-			{ganar=1;}
-		}
-
-		if ((c1!= '1' && c2 != '2' && c3 != '3' &&
-					c4 != '4' && c5 != '5' && c6 != '6' &&
-					c7 != '7' && c8 != '8' && c9 != '9') &&
-				ganar == 0){
-			{
-				empate=1;
-			}
-
-			if (ganar==1||empate==1){
-				system("clear");
-				if (ganar==1){
-					printf("JUGADOR: %d GANA!\n\n",jugador);
-					printf("\n %c | %c | %c\n",c1,c2,c3);
-					printf("---+---+---\n");
-					printf("\n %c | %c | %c\n",c4,c5,c6);
-					printf("---+---+---\n");
-					printf("\n %c | %c | %c\n\n",c7,c8,c9);
-				}
-
-				if (empate==1){
-					printf("EMPATE!\n",jugador);
-					printf("\n %c | %c | %c\n",c1,c2,c3);
-					printf("---+---+---\n");
-					printf("\n %c | %c | %c\n",c4,c5,c6);
-					printf("---+---+---\n");
-					printf("\n %c | %c | %c\n\n",c7,c8,c9);
-				}
-
-				printf("¿DESEA JUGAR DE NUEVO?: SI/NO\n");
-
-				fflush(stdin);
-
-				scanf("%c",&respuesta);
-
-				if (respuesta=='SI'||respuesta=='SI'){
-					empate=0;
-					jugador=2;
-					ganar=0;
-					c1='1';
-					c2='2';
-					c3='3';
-					c4='4';
-					c5='5';
-					c6='6';
-					c7='7';
-					c8='8';
-					c9='9';
-				}
-			}
-
-			if(error==1){
-				if (jugador==1)
-				{
-					jugador=2;
-				}
-				else
-				{
-					jugador=1;
-				}
-			}
-
-		}while(respuesta=='y'||respuesta=='Y');
-
-		return 0;
+	    intro_yo (c);
+	    
 	}
+	else {
+	    no_inteligencia (c);
+	}	
+	comprobador = ganador (c);
+	contador++;
+    }while(contador <= 9 && comprobador == 2);
+
+	system("clear");
+    tablero (c);
+
+    if ( comprobador == 0){
+	acabado = true;
+	printf("\t Enhorabuena has ganado !\n");
+    }
+    else if( comprobador == 1){
+	acabado = true;
+	printf("\t Has perdido :(\n\n");
+    }
+	if(contador == 9){
+	acabado = true;
+	printf("\t Has empatado :/ \n\n");
+	}
+
+}
+
+}
+
+void intro_num (char c[3][3]){   //** FUNCION PARA DARLE VALORES A LA MATRIZ//RELLENAR **//
+
+
+    char aux; //** variable de tipo caracter **//
+
+    aux = '1';
+
+    for(int a = 0; a<3; a++){
+
+	for(int b = 0; b<3; b++){
+
+	    c[a][b] = aux++; //** de tal forma que si c de [0][0] = a 1 y queremos que amuente en 1 .
+	}
+    }
+}
+
+void intro_yo (char c[3][3]){ //** esta funcion la utilizo para introducir una ficha en una casilla del 1 al 9 ... donde si d = 1 es que esta ocupada **//
+
+    int a,
+	b,
+	d;
+    char aux;
+    do{
+	do{
+	    printf(" Introduce tu casilla:\t ");
+	    __fpurge(stdin);
+	    scanf("%c",&aux);
+	}while (aux < '1' || aux > '9');
+	switch (aux) {
+	    case '1' : {
+			   a = 0;
+			   b = 0;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+
+	    case '2' : {
+			   a = 0;
+			   b = 1;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+
+	    case '3' : {
+			   a = 0;
+			   b = 2;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+	    case '4' : {
+			   a = 1;
+			   b = 0;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+	    case '5' : {
+			   a = 1;
+			   b = 1;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+	    case '6' : {
+			   a = 1;
+			   b = 2;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+	    case '7' : {
+			   a = 2;
+			   b = 0;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+		       }
+		       break;
+	    case '8' : {
+			   a = 2;
+			   b = 1;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+	    case '9' : {
+			   a = 2;
+			   b = 2;
+			   if (c[a][b] == 'X' || c[a][b] == 'O')
+			       d = 1;
+			   printf(" ESA CASILLA ESTA OCUPADA \n\n ");
+		       }
+		       break;
+	}
+    }while (d == 1);
+    c[a][b] ='X';
+}
+
+
+void no_inteligencia (char c[3][3]){
+    int a,
+	b,
+	d;	
+    srand(time(NULL));
+    do{
+	a= rand() % 3;
+	b= rand() % 3;
+	d= 0;
+	if(c[a][b] == 'X' || c[a][b] == 'O'){
+	    d= 1;
+	}
+    }while(d==1);
+
+    c[a][b] = 'O';
+}
+
+
+
+
+void tablero (char c[3][3]){ //** Pintar tablero**//
+    for(int a=0;a<3;a++){
+	for(int b=0;b<3;b++)
+	    if(b<2)
+		printf("\t| %c | ",c[a][b]);
+	    else
+		printf("\t| %c | ",c[a][b]);
+	if(a<2)
+	    printf("\n\t--------------------\n");      
+    }
+    printf("\n\n");
+}
+
+int ganador (char c[3][3]){ //** Funcion que comprueba si hemos ganado **//
+
+    if (c[0][0] == 'X' && c[0][1] == 'X' && c[0][2] == 'X' ||
+	    c[0][0] == 'X' && c[1][0] == 'X' && c[2][0] == 'X' ||
+	    c[1][1] == 'X' && c[0][0] == 'X' && c[2][2] == 'X' ||
+	    c[1][1] == 'X' && c[1][0] == 'X' && c[1][2] == 'X' ||
+	    c[1][1] == 'X' && c[2][0] == 'X' && c[0][2] == 'X' ||
+	    c[1][1] == 'X' && c[2][1] == 'X' && c[0][1] == 'X' ||
+	    c[2][2] == 'X' && c[2][1] == 'X' && c[2][0] == 'X' ||
+	    c[2][2] == 'X' && c[0][2] == 'X' && c[1][2] == 'X' 
+
+       )
+
+	return 0; //** HE GANADO !! **//
+
+
+    else if (c[0][0] == 'O' && c[0][1] == 'O' && c[0][2] == 'O' ||
+	    c[0][0] == 'O' && c[1][0] == 'O' && c[2][0] == 'O' ||
+	    c[1][1] == 'O' && c[0][0] == 'O' && c[2][2] == 'O' ||
+	    c[1][1] == 'O' && c[1][0] == 'O' && c[1][2] == 'O' ||
+	    c[1][1] == 'O' && c[2][0] == 'O' && c[0][2] == 'O' ||
+	    c[1][1] == 'O' && c[2][1] == 'O' && c[0][1] == 'O' ||
+	    c[2][2] == 'O' && c[2][1] == 'O' && c[2][0] == 'O' ||
+	    c[2][2] == 'O' && c[0][2] == 'O' && c[1][2] == 'O' 
+
+	    )
+
+	return 1; //** HE PERDIDO **//
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
