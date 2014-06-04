@@ -3,22 +3,25 @@
 
 int main(int argc,char *argv[]){
 
-	
-    	char caracter= '*';
-       
+
+	char caracter= '*';
+
 	int altura;
+
 	if( argc>=2)
-	    caracter=argv[1][0];
+
+		caracter=argv[1][0];
 
 	printf("introduce la altura: ",altura);
+
 	scanf(" %i", &altura);
 
 	for(int fila=0;fila<altura;fila++){
 
-		for(int col=0;col<altura;col++)
-			if(fila>=col)
+		for(int col=0;col<fila+1;col++) //** if(fila>=col) **//
 
-				printf("%c", caracter);
+
+			printf("%c", caracter);
 
 		printf("\n");
 

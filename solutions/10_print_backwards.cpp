@@ -23,7 +23,7 @@ int main(){
     while(end != beginning){
 
 	*end--;
-	printf( "%c\n\t", *end);
+	printf( "%c", *end);
     }
     printf("\n");
     return EXIT_SUCCESS;

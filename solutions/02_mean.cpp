@@ -5,21 +5,24 @@
 
 int main(int argc, char *argv[]){
 
-        int ALUMNOS;    
+        int notas;
+    
 	double nota,
 	       media= 0;	
 
-        ALUMNOS = atoi(argv[1]);
+        notas = atoi(argv[1]);
 
-	for(int alumnos=0;alumnos<ALUMNOS;alumnos++){
+	for(int alumnos=0;alumnos<notas;alumnos++){
 
 		printf("introduce nota : \t");
 
-		scanf(" %lf",&nota);
+		scanf(" %2lf",&nota);
 
 		media+=nota;
 	}
-	media /= ALUMNOS;
+
+	media /= notas;
+
 	printf("media: %2lf\n", media);
 
 	return EXIT_SUCCESS;

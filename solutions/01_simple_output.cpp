@@ -5,13 +5,18 @@
 int main(int argc, char *argv[]){
 
 
-int repetir;
+	if(argc > 1)
 
-for(int repetir=0;repetir<10;repetir++)
+		for(int repetir=0;repetir<10;repetir++)
 
-printf("what the fox say?\n");
+			printf("%s\n", argv[1]);
 
-return EXIT_SUCCESS;
+	else 
+
+		return EXIT_FAILURE;
+
+
+	return EXIT_SUCCESS;
 
 }
 
