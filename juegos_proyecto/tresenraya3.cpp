@@ -37,9 +37,11 @@ void loop (char c[3][3]){   //** Turnos **//
 
 
 	do{
-		//** borra todo lo que haya en pantalla**//
+	
 		system("clear");
+		//** borra todo lo que haya en pantalla**//
 		tablero (c);
+		//**pinta el tablero**//
 		printf("\n");
 
 		if(contador % 2 == 0){       //** si 'contador' resto 2 ("JUGADORES") es igual a 0 entonces -> vamos nosotros("intro_yo")**//
@@ -201,6 +203,7 @@ void no_inteligencia (char c[3][3]){
 
 void tablero (char c[3][3]){ //** Pintar tablero**//
 
+	system ("figlet TresEnRaya");
 	printf("\n\n\n");
 
 
