@@ -5,22 +5,19 @@
 int main(int argc,char *argv[]){
 
     int par[N];
-	
-    printf("+---+---+---+---+\n");
+    
+    system ("figlet PARES");
+    printf("\n");
+    printf("+---+---+---+---+---+\n");
 
     for ( int i=0; i<N;i++)
 
 	par[i]= 2 * i;
 
     for ( int i=0;i<N;i++)
-	printf(" %i |", par[i]);
-	printf("\n");
-    
+	printf("| %i ", par[i]);
+    printf("|\n");
 
-    printf("+---+---+---+---+\n");
-    
-
-
-
+    printf("+---+---+---+---+---+\n");
     return EXIT_SUCCESS;
 }
