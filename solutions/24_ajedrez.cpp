@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 	for(int col=0; col<N;col++)
 	    if(fila == fila_torre && col == col_torre)
 
-	    printf("%s", negras[fila][col]?"♖":"░"); //**si es verdadero entonces pongo una X si es falso(igual a cero) pon un espacio**//
+	    printf("%s", negras[fila][col]?"X":"O"); //**si es verdadero entonces pongo una X si es falso(igual a cero) pon un espacio**//
 	printf("\n");
     }
     printf("La torre %scome.\n\n",come ? " " : "no ");
