@@ -10,7 +10,9 @@ int main(int argc,char *argv[]){
 	"cuadrado",
 	"circulo"	    
     };
-    do{    printf("\nElige:\n ");
+    do{ 
+     	system("clear");	
+	printf("\nElige:\n ");
 
 	/** size of te da el valor de una variable en bytes**/
 	for(int i=0;i<sizeof(opciones)/sizeof(char *);i++)
