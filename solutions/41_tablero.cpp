@@ -1,13 +1,20 @@
+
 #include<stdio.h>
 #include<stdlib.h>
 #define N 5
+
 int main(int argc,char *argv[]){
 
-	int posicion = 1;
+	int tablero = 1;
 
 	for(int fila=0;fila<N;fila++){
-		for(int col=0;col<N;posicion++, col++)
-			printf("%i",posicion);
+
+
+		for(int col=1;col<N;tablero++, col++)
+                
+			
+
+			printf("| %i |",tablero+=tablero--);
 
 		printf("\n");
 	}
