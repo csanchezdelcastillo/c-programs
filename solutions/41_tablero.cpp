@@ -5,20 +5,25 @@
 
 int main(int argc,char *argv[]){
 
-	int tablero = 1;
+    int tablero[N];
 
-	for(int fila=0;fila<N;fila++){
-
-
-		for(int col=1;col<N;tablero++, col++)
-                
-			
-
-			printf("| %i |",tablero+=tablero--);
-
-		printf("\n");
-	}
+    tablero[1]= tablero[0]=1 ;
 
 
-	return EXIT_SUCCESS;
+    for(int i=2;i<N;i++)/** la suma de los dos anteriores**/
+
+	tablero[i] = tablero[i-1] + tablero[i-2];
+
+    for(int i=0;i<N; i++)
+
+
+	printf("| %i |",tablero[i]);
+
+    printf("\n");
+
+
+
+
+
+    return EXIT_SUCCESS;
 }
