@@ -4,17 +4,26 @@
 
 int main(int argc,char *argv[]){
 
-    for(int c=0; c<6;c++){
-	for(int d=0;d<6;d++)
-	    printf("\n");
+    for(int c=0; c<6;c++)
+
 	for(int a=0;a<6;a++){
+
 	    for(int b=0;b<6;b++)
+
 		if(b<3)
-		    printf("*",a);
+
+		    printf("*");
+
 		else
-		    printf("-",b);
+
+		    printf("-");
+
 	}
+
 	printf("\n");
-    }
-	return EXIT_SUCCESS;
-    }
+
+    
+
+    return EXIT_SUCCESS;
+
+}
