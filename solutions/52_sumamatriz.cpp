@@ -28,12 +28,18 @@ int main(int argc,char *argv[]){
 	double media[N][M];
 
 	for(int fila=1;fila<N-1;fila++)
+	    
 	    for(int col=1; col<M-1; col++)
+	
 		media[fila][col]= (A[fila][col-1] + A[fila-1][col] + A[fila][col +1]+ A[fila +1][col])/4;
 
+	
 	for(int fila=0;fila<N;fila++){
-	    intint  for(int col=0;col<N;col++)
+	
+       	    for(int col=0;col<N;col++)
+
 		printf("%2.lf", media[fila][col]);
+
 	    printf("\n");
 	}
 
