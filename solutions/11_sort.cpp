@@ -10,8 +10,10 @@ char comparar_palabras(const char *list[]){
 	primera = list[0];
 	segunda = list[1];
 	compara = strcmp(primera, segunda);
+	//"strcmp" = compara// 
+
 	if(compara == 0)	
-		printf("Las palabras son iguales.");
+		printf("\tLas palabras son iguales.");
 	else{
 		if(compara > 0)	
 			printf(" %s %s", list[1], list[0]);
@@ -24,8 +26,8 @@ char comparar_palabras(const char *list[]){
 
 int main(int argc, char *argv[]){
 
-	const char *list[] = { "yelp", "yelp"};
-
+	const char *list[] = { "holacaracola", "holacaracola"};
+	system("clear");
 	comparar_palabras(list);
 
 	return EXIT_SUCCESS;
