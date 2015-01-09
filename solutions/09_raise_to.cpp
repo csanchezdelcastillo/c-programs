@@ -23,7 +23,7 @@ int power(int list[N], int exponent){
 			    }
 		        }
 }
-//numeros del unos al 16
+//numeros del 1 al 16
 void fill_in(int list[N]){
         for(int count=0; count<N; count++)
 	    list[count]= count+1;
