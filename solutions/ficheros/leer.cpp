@@ -9,15 +9,16 @@ int main(int argc,char *argv[]){
 	char letra;
 
 
-	fichero = fopen("carta.txt","r");
+	fichero = fopen("carta.txt","r");// abrir fichero y leer
 
 	//fprintf(stdout,"%s\n",buffer);
-        while(letra = fgetc(fichero)= !EOF){
+        while((letra = fgetc(fichero))!=EOF){
 	      putchar(letra);
 
 	}
-	fclose(fichero);
+	fclose(fichero);//cerrar fichero 
 
+//ftell conocer la posicion de un fichero que te devuelve un long float "lf"
 
     return EXIT_SUCCESS;
 }
