@@ -16,7 +16,9 @@ int main(int argc,char *argv[]){
 	      putchar(letra);
 
 	}
-	fclose(fichero);//cerrar fichero 
+	fclose(fichero);//cerrar fichero
+
+//fseek voy a una posicion de un fichero	
 
 //ftell conocer la posicion de un fichero que te devuelve un long float "lf"
 

@@ -1,0 +1,1 @@
+Estructuras estan divididas en campos cada uno de ellos tiene un valor en el momento al que se llama registro.
