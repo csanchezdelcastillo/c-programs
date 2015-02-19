@@ -8,11 +8,14 @@ int main(int argc,char *argv[]){
 	FILE *fichero;
 	char letra;
 
+	long int final;
+
 
 	fichero = fopen("carta.txt","a+");// abrir fichero y leer
-
+	final = fseek(fichero,letra,SEEK_END);
 	//fprintf(stdout,"%s\n",buffer);
         while((letra = fgetc(fichero))!='\n'){
+
 	      putchar(letra);
 
 	}
