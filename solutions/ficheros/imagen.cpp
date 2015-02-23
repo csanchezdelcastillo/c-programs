@@ -10,7 +10,7 @@ int main(int argc,char *argv[]){
 
 	//shor es la mitad de un int (4) es decir 2//
 	//
-	imagen=fopen("madrid.jpeg","rb");
+	imagen = fopen("madrid.jpeg","rb");
 
 	fseek(imagen,12,SEEK_SET); // SEEK_SET para empezar a leer desde el principio del fichero
 
