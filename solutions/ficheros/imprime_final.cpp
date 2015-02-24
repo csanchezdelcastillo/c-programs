@@ -6,20 +6,16 @@
 int main(int argc,char *argv[]){
 
     FILE *fichero;
-    char frase[0x10];
-    char buffer;
+    char buffer[0x10];
 
 
 
     fichero = fopen("carta.txt","r+");// abrir fichero y leer
-    fread = (&buffer,)
+    fread(&buffer,sizeof(buffer),1,fichero);
     fseek(fichero,0,SEEK_END);
     //fprintf(stdout,"%s\n",buffer);
-    while((letra = fgetc(fichero))!='\n'){
 
-	putchar(letra);
 
-    }
     fclose(fichero);//cerrar fichero
 
     //fseek voy a una posicion de un fichero	
