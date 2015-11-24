@@ -11,7 +11,6 @@ int main(){
 
     const char *sentence = "The world is vampire.";
 
-    const char *beginning = sentence;
 
 
     const char *end = sentence;
@@ -20,7 +19,7 @@ int main(){
 
 	*end++;
 
-    while(end != beginning){
+    while(end != sentence){
 
 	*end--;
 	printf( "%c", *end);

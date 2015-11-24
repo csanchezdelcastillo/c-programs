@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 feliz navidad
 
 prospero año y felicidad
+=======
+buenos dias como estas 
+
+todo genial
+
+deberiamos hablar
+
+ok perfecto adios
+
+>>>>>>> 69d543682669e6bf4560cac3fbc1c83ae7ea0df3
 
 pastillas de jabon a dos reales
 
